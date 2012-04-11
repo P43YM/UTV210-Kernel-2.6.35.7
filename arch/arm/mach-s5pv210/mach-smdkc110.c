@@ -675,20 +675,23 @@ static void __init smdkc110_dm9000_set(void)
 static struct s3cfb_lcd lte480wv = {
 	.width = S5PV210_LCD_WIDTH,
 	.height = S5PV210_LCD_HEIGHT,
+	.p_width = 154,
+  .p_height = 10,
 	.bpp = 32,
 	.freq = 60,
 
     // namko: Fix LCD timings.
 	.timing = {
-		.h_fp = 10,
-		.h_bp = 78,
-		.h_sw = 10,
-		.v_fp = 30,
-		.v_fpe = 1,
-		.v_bp = 30,
-		.v_bpe = 1,
-		.v_sw = 2,
+		.h_fp	= 8,
+		.h_bp	= 40,
+		.h_sw	= 48,
+		.v_fp	= 9,
+		.v_fpe	= 1,
+		.v_bp	= 29,
+		.v_bpe	= 1,
+		.v_sw	= 3,
 	},
+
 	.polarity = {
 		.rise_vclk = 0,
 		.inv_hsync = 1,
