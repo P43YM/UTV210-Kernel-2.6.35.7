@@ -15,19 +15,21 @@
 static struct s3cfb_lcd lte480wv = {
 	.width = 800,
 	.height = 480,
+	.p_width = 152,
+  .p_height = 91,
 	.bpp = 32,
 	.freq = 60,
 
     // namko: Fix LCD timings.
 	.timing = {
 		.h_fp	= 10,
-		.h_bp	= 78,
-		.h_sw	= 10,
-		.v_fp	= 30,
+		.h_bp	= 40,
+		.h_sw	= 48,
+		.v_fp	= 11,
 		.v_fpe	= 1,
-		.v_bp	= 30,
+		.v_bp	= 29,
 		.v_bpe	= 1,
-		.v_sw	= 2,
+		.v_sw	= 3,
 	},
 
 	.polarity = {
